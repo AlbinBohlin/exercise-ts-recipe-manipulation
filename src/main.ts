@@ -48,8 +48,6 @@ if(app.querySelector("main")!.id !== wrongHTML.id){
 // ######### Hoisted functions below ##########
 
 function addStylesheet(href: string, id: string) {
-  
-
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.href = href;
