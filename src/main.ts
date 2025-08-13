@@ -22,21 +22,27 @@ const correctLink = document.querySelector<HTMLSpanElement>('.correct-link')!;
 const wrongLink = document.querySelector<HTMLSpanElement>('.wrong-link')!;
 
 correctLink.addEventListener('click', () => {
+  
+  if(app.querySelector("main")!.id !== "correct-page"){
   removeStylesheet('wrong');
   addStylesheet('./src/correct.css', 'correct');
   app.replaceChild(correctHTML, wrongHTML);
-
+  
   // Uncomment this function invocation below
   // part1();
+}
 });
 
 wrongLink.addEventListener('click', () => {
+
+if(app.querySelector("main")!.id !== wrongHTML.id){
   removeStylesheet('correct');
   addStylesheet('./src/wrong.css', 'wrong');
   app.replaceChild(wrongHTML, correctHTML);
 
   // Uncomment this function invocation below
   // part2();
+  }
 });
 
 // ######### Hoisted functions below ##########
